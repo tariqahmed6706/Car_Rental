@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Register</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <section id="front-card">
+        <div>
+            <button id="back-to-home" onclick="window.location.href='../index.html'">Back to home</button>
+            <h1>Sign in</h1>
+            <hr id="hr1">
+            <form action="#home" method="get">
+                <p>
+                    Use your account to log in.<br>
+                    The account will be added to this device.<br>
+                    With your account, you can get gifts and promo codes.
+                </p>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" id="sign-in">Sign in</button>
+                <hr id="hr2">
+                <h4>New user? Join us from here!</h4>
+                <button type="button" id="register" onclick="openregister()">Register</button>
+            </form>
+        </div>
+    </section>
+    <section id="back-card">
+        <div>
+            <button id="back-to-home" onclick="window.location.href='../index.html'">Back to home</button>
+            <h1>Create new account</h1>
+            <hr id="hr1">
+            <form action="/index.html" method="get">
+                <p>
+                    Use your account to sign up.<br>
+                    The account will be added to this device.<br>
+                    With your account, you can get gifts and promo codes.
+                </p>
+                <input type="text" name="first-name" placeholder="First name" required>
+                <input type="text" name="last-name" placeholder="Last name">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="confirm_password" name="confirm-password" placeholder="Confirm Password" required>
+                <span id="message"></span>
+                <button type="submit" id="register">register</button>
+            </form>
+        </div>
+    </section>
+    <img src="../attachments/background2.png" alt="" draggable="false">
+    <script>
+        const pass = document.getElementById('password');
+        const confirmPass = document.getElementById('confirm_password');
+        const message = document.getElementById('message');
+        const submitBtn = document.getElementById('register');
+
+        function validatePassword() {
+            if(pass.value === confirmPass.value && pass.value!== '') {
+            message.textContent = 'متطابق';
+            message.style.color = 'green';
+            } else {
+            message.textContent = 'الباسورد مش متطابق';
+            message.style.color = 'red';
+            }
+        }
+
+        submitBtn.addEventListener('click', function(e) {
+            if (pass.value!== confirmPass.value) {
+            e.preventDefault(); // يمنع الإرسال
+            alert('الباسورد مش متطابق، رجاءً صححها');
+            }
+        });
+
+        pass.oninput = validatePassword;
+        confirmPass.oninput = validatePassword;
+    </script>
+</body>
+</html>
