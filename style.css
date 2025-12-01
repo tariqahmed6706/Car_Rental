@@ -343,13 +343,13 @@ section {
 h2#h2-of-nav {
   font-size: 24px;
   font-weight: bold;
-  color: rgb(218, 17, 17);
+  color: white;
 }
 #car-types {
   margin: 0px 100px 0px 100px;
   padding: 20px 20px 20px 20px;
-  background-color: #009cf7;
-  backdrop-filter: blur(20px);
+  background-color: #ffffff40;
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   text-transform: capitalize;
   list-style: none;
