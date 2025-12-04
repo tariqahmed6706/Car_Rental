@@ -8,46 +8,35 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
+  margin: 0;
+  padding: 0;
   background-attachment: fixed;
   background-size: cover;
-  background-position: 0px -125px;
+  background-position: 0px -135px;
   position: relative;
   animation: body 1s ease;
 }
 body::before {
   content: "";
-  position: absolute;
   backdrop-filter: blur(2px);
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparent;
-  transition: 1s ease;
+  background-color: #00008b1a;
+  transition: all 1s ease;
   z-index: -1;
 }
-@keyframes body {
-  0%   { transform: scale(1) translateY(50px); opacity: 0; background:#98fffc;}
-  100% { transform: scale(1) translateY(0px); opacity: 1.0; }
-}
-header#header {
-  margin: -65px 0px 0px 0px;
-  padding: 75px 0px 0px 0px;
+header {
+  margin: 0;
+  padding: 10px 0 20px;
   background-color: #00048434;
   backdrop-filter: blur(20px);
-  border: transparent;
-  border-radius: 0px 0px 0px 0px;
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: auto;
   overflow: hidden;
   transition: 50ms;
 }
 div.header-container {
-  margin: 0px 15px 0px 15px;
   display: grid;
   place-items: center;
   align-items: center;
@@ -56,298 +45,197 @@ div.header-container {
 }
 #menu-btn {
   display: none;
-  transition: 250ms;
 }
 #header-menu {
-  padding: 0px 20px 0px 20px;
   display: flex;
-  gap: 20px;
+  background-color: #9a9aff67;
+  padding: 15px;
+  border-radius: 10px;
+  gap: 30px;
   list-style: none;
-  transition: 500ms;
-}
-/* when screen width = 900px , Menu ☰ appears with [div.header-container] with changes */
-
-@media screen and (max-width: 900px) {
-  #menu-btn {
-    display: flex;
-    margin: 0px 0px 10px 0px;
-    padding: 10px 10px 10px 10px;
-    background-color: gray;
-    color: white;
-    border: 0px solid gray;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 0px 5px 2px #69460d inset,
-                0px 0px 5px 0px blue;
-    backdrop-filter: blur(15px);
-    font-size: 16px;
-    font-weight: 600;
-    justify-content: center;
-    width: 100px;
-    transition: 250ms;
-  }
-  #menu-btn:hover {
-    background-color: #5a5a5a;
-    border: 0px solid #5a5a5a;
-  }
-  #header-menu {
-    margin: 0px auto 15px auto;
-    padding: 12px 25px 10px 25px;
-    display: none;
-    background-color: #f9c0f284;
-    border: 3px solid black;
-    border-radius: 20px 20px 20px 20px;
-    width: 80%;
-    overflow: hidden;
-    overflow-x: scroll;
-  }
+  transition: 250ms;
 }
 .my-link {  /* it will be the same */
-  margin: auto 0px auto 0px;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
   float: left;
   text-decoration: none;
   font-weight: 600;
   width: 100px;
   text-align: center;
-  background-color: #c94e9abb;
+  background-color: #001679;
   backdrop-filter: blur(15px);
   color: white;
   border: 0px solid transparent;
-  border-radius: 5px 5px 5px 5px;
-  box-shadow: 0px 0px 5px 2px #69460d inset,
-              0px 0px 5px 0px blue;
-  transition: 500ms;
+  border-radius: 5px;
+  transition: 100ms;
 }
 .my-link:hover {
-  background-color: #ae006c;
-  color: #98fffc;
-  transform: translateY(-3px);
+  background-color: #0023be;
+  transform: translateY(-5px);
 }
 .my-link.clicked {
-  background-color: #6e0044;
-  color: #48aca8;
+  background-color: #000b3b;
+  color: #00b7ff;
   transform: translateY(-3px) scale(0.5);
-  transition: 500ms;
+  transition: 100ms;
 }
 input.search {
   margin: auto auto auto auto;
-  padding: 10px 10px 10px 10px;
-  background-color: burlywood;
+  padding: 10px;
+  background-color: #b4b4ff;
   width: 350px;
   height: 50px;
-  border: 3px solid #a5992a;
-  border-radius: 25px 5px 25px 5px;
-  display: grid;
-  place-items: center;
+  border: 0px solid transparent;
+  border-radius: 30px;
   transition: 250ms;
-  box-shadow: 0px 0px 5px 2px #69460d;
-  animation: search 5s infinite;
+  box-shadow: 0px 0px 5px 2px #0f0d69;
 }
 input.search:hover {
-  background-color: #ffdaaa;
-  transition: 250ms;
-  box-shadow: 0px 0px 10px 3px #ae761b;
+  background-color: #d0d0ff;
+  transition: 150ms;
+  box-shadow: 0px 0px 10px 5px #0f0d69;
 }
-ul#lightm-darkm {
-  margin: 10px auto auto auto;
-  padding: 0px 20px 5px 20px;
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  transition: 500ms;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  flex-direction: row;
+input.search:focus {
+  outline: 2px solid blue;
 }
-button.lightm,
-button.darkm {
-  margin: 10px auto 10px auto;
-  padding: 0px 0px 0px 0px;
-  background-color: #ffd490;
-  border: 2px solid #755005;
-  border-radius: 10px 10px 10px 10px;
-  width: 35px;
-  height: 35px;
-  transition: 250ms;
-  box-shadow: 0px 0px 5px #69460d;
-  animation: lightm-darkm 3s infinite linear;
-}
-button.lightm:hover,
-button.darkm:hover {
-  background-color: #ffbc50;
-  border: 2px solid #4e3402;
-  border-radius: 10px;
-  transition: 250ms;
-  scale: 1.1;
-  box-shadow: 0px 0px 10px #ae761b;
-  animation: lightm-darkm 3s 0s infinite linear;
-}
-@keyframes lightm-darkm {
-  0%   { border: 3px solid red; transform: rotate(0deg); }
-  20%  { border: 3px solid green; }
-  40%  { border: 3px solid blue; }
-  60%  { border: 3px solid gray; }
-  80%  { border: 3px solid orange; }
-  100% { border: 3px solid red; transform: rotate(360deg); }
-}   /* finish header
+
+/* finish header
 -------------------------------------------------------------------------------------------------------
 Popup styles
 */
 div#Feedback-Popup {
-  margin: 0px;
-  left: 0px;
-  top: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: none;
-  position: fixed;
   background-color: #00000080;
-  justify-content: center;
-  align-items: center;
-  animation: Feedback-Popup 500ms ease;
-  z-index: 999;
-}
-@keyframes Feedback-Popup {
-  0%   { scale: 0; opacity: 0; }
-  100% { scale: 1; opacity: 1; }
+  z-index: 2;
 }
 div#Feedback-Content {
-  margin: 0px auto 0px auto;
-  padding: 30px 30px 30px 30px;
+  margin: auto;
+  padding: 15px 35px;
   position: relative;
-  background-color: #ffffffbf;
-  backdrop-filter: blur(25px);
-  border: 3px solid #25cab4;
-  border-radius: 20px 20px 20px 20px;
+  background-color: #e3e3ff44;
+  backdrop-filter: blur(10px);
+  border: 3px solid #00004d2f;
+  border-radius: 50px;
   width: auto;
-  max-width: 500px;
+  height: 485px;
   animation: Feedback-Content_toDown 500ms ease;
-  box-shadow: 0px 0px 20px 20px slategray;
-  overflow: hidden;
-  overflow-y: auto;
-}
-@keyframes Feedback-Content_toDown {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(0); }
-}
-@media screen and (max-width: 450px) {
-  div#Feedback-Content {
-    padding: 30px 0px 30px 0px;
-  }
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 button#close-feedback {
-  margin: 25px 25px 0px 0px;
-  padding: 0px 0px 0px 0px;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  background-color: transparent;
-  border: 1px solid red;
-  border-radius: 8px 8px 8px 8px;
+  top: 20px;
+  right: 35px;
+  font-size: 25px;
+  background-color: #ff000033;
+  border: 1px solid transparent;
+  border-radius: 8px;
   width: 30px;
   height: 30px;
-  transition: 250ms;
-  box-shadow: 0px 0px 5px 2px #ff0000;}
+  transition: 150ms;
+}
 button#close-feedback:hover {
-  background-color: #f79999;
-  border: 1px solid #f79999;
+  background-color: red;
 }
 h1#feedback {
   text-align: center;
-  text-decoration: overline;
-  text-shadow: 0px 0px 5px #ff0000;
+  text-shadow: 0px 0px 5px blue;
   font-weight:bolder;
 }
 form#feedback {
   display: grid;
   font-weight: bold;
-  text-shadow: 0px 0px 1px #ff0000;
-  div.div-for-form {
-    display: grid;
-    div.first-and-last-name {
-      display: flex;
-      margin: 0px auto 10px auto;
-      gap: 10px;
-      div.row {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        input {
-          padding: 10px 10px 10px 10px;
-          border: 2px solid #000000;
-          border-radius: 10px 10px 10px 10px;
-        }
-        input:focus {
-          border: 2px solid blue;
-          border-radius: 10px 10px 10px 10px;
-          outline: none;
-        }
-      }
-    }
-    input {
-      margin: 0px 0px 20px 0px;
-      padding: 10px 10px 10px 10px;
-      border: 2px solid #000000;
-      border-radius: 10px 10px 10px 10px;
-    }
-    input:focus {
-      border: 2px solid blue;
-      border-radius: 10px 10px 10px 10px;
-      outline: none;
-    }
-  }
-  hr.feedback-hr {
-    width: 100%;
-  }
-  h4.provide-feedback {
-    text-decoration: underline;
-  }
-  div.feedback-choose ul {
-    margin: 0px auto 20px auto;
-    background-color: #00000030;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px 10px 10px 10px;
-  }
+  text-shadow: 0px 0px 1px blue;
+}
+div.div-for-form {
+  display: grid;
+}
+div.first-and-last-name {
+  display: flex;
+  margin: 0px auto 10px auto;
+  gap: 10px;
+}
+div.row {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+div.row input,
+input[type="email"],
+input[type="tel"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+}
+div.row input:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border: 2px solid blue;
+  border-radius: 10px;
+  outline: none;
+}
+hr.feedback-hr {
+  width: 100%;
+}
+h4.provide-feedback {
+  text-decoration: underline;
+}
+div.feedback-choose ul {
+  margin: 0px auto 20px auto;
+  padding: 8px;
+  background-color: #00000050;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+button#feedback-submit {
+  margin: 0 auto;
+  padding: 10px;
+  font-weight: 600;
+  width: 100px;
+  text-align: center;
+  background-color: #001679;
+  color: white;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  transition: 100ms;
+}
+button#feedback-submit:hover {
+  background-color: #0023be;
+  box-shadow: 0px 0px 5px 0px black;
 }
 /* finish all popups of header
 -------------------------------------------------------------------------------------------------------
-section styles
+nav styles
 */
-section {
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
-  background-color: #29f5ae0e;
-  padding: 0px 0px px 0px;
-  background-color: transparent;
-  border-radius: 0px 0px 0px 0px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  place-items: center;
-}
-.car-types-nav {
-  margin: 0px 0px 0px 0px;
-  backdrop-filter: blur(30px);
-  background-color: #0016a429;
+
+nav {
+  margin: 0;
+  backdrop-filter: blur(50px);
+  background-color: #0016a449;
   width: 100%;
 }
-.car-types-nav div {
-  margin: 0px 30px 25px 30px;
+nav div {
+  margin: 0;
+  padding: 10px 0;
   text-align: center;
 }
-h2#h2-of-nav {
+nav div h2 {
   font-size: 24px;
   font-weight: bold;
   color: white;
 }
-#car-types {
-  margin: 0px 100px 0px 100px;
-  padding: 20px 20px 20px 20px;
+div #car-types {
+  margin: 0px 100px;
+  padding: 20px;
   background-color: #ffffff40;
   backdrop-filter: blur(10px);
   border-radius: 15px;
@@ -359,22 +247,15 @@ h2#h2-of-nav {
   gap: 25px;
   transition: 250ms;
 }
-@media screen and (max-width: 900px) {
-  #car-types {
-    margin: 0px -20px 0px -20px;
-    gap: 10px;
-    transition: 250ms;
-  }
-}
 #car-types li {
   margin: auto auto auto auto;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
   background-color: #ffffff40;
   backdrop-filter: blur(3px);
   color: black;
   box-shadow: 0px 0px 5px 0px black;
   border: 0px solid transparent;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
   text-align: center;
@@ -387,48 +268,68 @@ h2#h2-of-nav {
   box-shadow: 0px 0px 5px 2px blue;
   transition: 150ms;
 }
-#luxury, #suv,
-#sport, #trucks, #modern {
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
-  background-color: #4b29f522;
-  backdrop-filter: blur(5px);
-  border-radius: 0px 0px 0px 0px;
+
+/* finish nav
+-------------------------------------------------------------------------------------------------------
+section styles
+*/
+section {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  place-items: center;
+}
+#luxury, #suv,
+#sport, #trucks, #modern {
+  margin: 0px;
+  padding: 0px;
+  background-color: #4b29f522;
+  display: grid;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
 }
 h1#car-types {
-  margin: 65px auto 65px auto;
-  padding: 10px 10px 10px 10px;
-  background-color: #6f008bdd;
+  margin: 0 auto;
+  position: sticky;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #001284c6;
   color: beige;
-  border: 2px solid #ffffff40;
-  border-radius: 100px 10px 100px 10px;
   font-style: oblique;
-  text-decoration: overline;
+  text-decoration: underline;
   text-transform: capitalize;
-  width: 75%;
+  width: 35%;
+  height: 30px;
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 1;
+}
+div.for-flex {
+  display: flex;
+  overflow: auto;
 }
 #car {
   margin: auto auto 50px auto;
-  padding: 15px 15px 15px 15px;
+  padding: 15px;
   background-color: #cacacac7;
   border: 3px solid #25cab4cc;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   box-shadow: 0px 0px 5px 5px #1da18fcc inset,
               0px 0px 5px 5px #25cab4cc;
   display: grid;
   text-align: center;
   border-radius: 15px;
+  width: calc(100%/3);
   position: relative;
   backdrop-filter: blur(10px);
   /* .car:hover after .carmodel */
 }
 .brand {
-  margin: 15px 15px 15px 15px;
+  margin: 15px;
   font-size: 30px;
   color: black;
   transition: 1000ms;
@@ -451,9 +352,9 @@ h1#car-types {
   }
 }
 img {
-  margin: 25px 25px 25px 25px;
+  margin: 25px;
   border: 2px solid #25cab4cc;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   box-shadow: 0px 0px 15px 3px #115d53cc;
   filter: blur(1px);
   width: 300px;
@@ -467,15 +368,15 @@ img:hover {
   transition: 200ms;
 }
 .booking-btn {
-  margin: 10px auto 10px auto;
-  padding: 10px 10px 10px 10px;
+  margin: 10px auto;
+  padding: 10px;
   background-color: #007767cc;
   backdrop-filter: blur(15px);
   color: white;
   font-weight: 600;
   width: 150px;
   border: 0px solid transparent;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 5px;
   box-shadow: 0px 0px 5px 2px #007767cc inset,
               0px 0px 5px 2px #007767cc;
   transition: 250ms;
@@ -512,10 +413,6 @@ div#booking-modal {
   animation: booking-modal 500ms ease;
   z-index: 999;
 }
-@keyframes booking-modal {
-  0%   { scale: 0; opacity: 0; }
-  100% { scale: 1; opacity: 1; }
-}
 div#booking-modal-content {
   margin: 0px auto 0px auto;
   padding: 30px 30px 30px 30px;
@@ -530,10 +427,6 @@ div#booking-modal-content {
   box-shadow: 0px 0px 20px 20px slategray;
   overflow: hidden;
   overflow-y: auto;
-}
-@keyframes booking-modal-content_toDown {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(0); }
 }
 @media screen and (max-width: 450px) {
   div#booking-modal-content {
