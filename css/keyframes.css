@@ -1,0 +1,41 @@
+/*  All keyframes of page  */
+
+@keyframes body {
+    0% {
+        transform: scale(1) translateY(25px);
+        opacity: 0;
+        background: #000057;
+    }
+    100% {
+        transform: scale(1) translateY(0px);
+        opacity: 1.0;
+        background-color: #00008b1a;
+    }
+}
+@keyframes booking-modal-content_toDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes Feedback-Content_toDown {
+    0% {
+        transform: translateY(10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes booking-modal {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}

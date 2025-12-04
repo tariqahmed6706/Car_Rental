@@ -1,0 +1,44 @@
+/* when screen width = 900px , Menu ☰ appears with [div.header-container] with changes */
+
+@media screen and (max-width: 900px) {
+    #menu-btn {
+        display: flex;
+        margin: 0px 0px 10px 0px;
+        padding: 10px 10px 10px 10px;
+        background-color: gray;
+        color: white;
+        border: 0px solid gray;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0px 0px 5px 2px #69460d inset,
+                            0px 0px 5px 0px blue;
+        backdrop-filter: blur(15px);
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        width: 100px;
+        transition: 250ms;
+    }
+    #menu-btn:hover {
+        background-color: #5a5a5a;
+        border: 0px solid #5a5a5a;
+    }
+    #header-menu {
+        margin: 0px auto 15px auto;
+        padding: 12px 25px 10px 25px;
+        display: none;
+        background-color: #9a9aff8e;
+        border-radius: 20px 20px 20px 20px;
+        width: 80%;
+        overflow: hidden;
+        overflow-x: scroll;
+        scrollbar-color: black transparent;
+    }
+    div#Feedback-Content {
+        transform: scale(0.9);
+    }
+    div #car-types {
+        margin: 0 auto;
+        gap: 10px;
+        transition: 250ms;
+    }
+}
