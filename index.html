@@ -28,8 +28,8 @@
             <input class="search" type="search" name="Search" placeholder="Search here ..." title="Search for your food here">
             <br>
             <a href="html/economic_cars.html" class="my-link">Economic Cars</a>
-            <li onclick="document.getElementById('footer').scrollIntoView({behavior: 'smooth'});">Go below</li>
         </div>
+        <button id="go-below-btn" onclick="document.getElementById('footer').scrollIntoView({behavior: 'smooth'});">▼</button>
     </header>
     <!-- The end of header of the index -->
     <!-- It appears when click on feedback button (openfeedback()) -->
@@ -84,14 +84,18 @@
                 <li onclick="document.getElementById('modern').scrollIntoView({behavior: 'smooth'});">Modern</li>
             </ul>
         </div>
-        <button id="go-above-btn" onclick="document.getElementById('header').scrollIntoView({behavior: 'smooth'});">↑</button>
+        <button id="go-above-btn" onclick="document.getElementById('header').scrollIntoView({behavior: 'smooth'});">▲</button>
     </nav>
     <!-- End of nav -->
     <!-- The start of section of the index -->
     <section>
         <!-- Start of Luxury -->
         <div id="luxury">
-            <h1 id="h1-car-types">Luxury cars section</h1>
+            <div class="right-h1-left">
+                <button id="right-btn">►</button>
+                <h1 id="h1-car-types">Luxury cars section</h1>
+                <button id="left-btn">◀</button>
+            </div>
             <div class="for-flex">
                 <div id="car">
                     <h3 class="brand">Rolls-Royce</h3>
@@ -182,7 +186,11 @@
         <!-- End of luxury -->
         <!-- Start of SUV -->
         <div id="suv">
-            <h1 id="h1-car-types">SUV cars section</h1>
+            <div class="right-h1-left">
+                <button id="right-btn">►</button>
+                <h1 id="h1-car-types">SUV cars section</h1>
+                <button id="left-btn">◀</button>
+            </div>
             <div class="for-flex">
                 <div id="car">
                     <h3 class="brand">BMW</h3>
@@ -252,7 +260,11 @@
         <!-- End of SUV -->
         <!-- Start of Sports -->
         <div id="sport">
-            <h1 id="h1-car-types">Sport cars section</h1>
+            <div class="right-h1-left">
+                <button id="right-btn">►</button>
+                <h1 id="h1-car-types">Sport cars section</h1>
+                <button id="left-btn">◀</button>
+            </div>
             <div class="for-flex">
                 <div id="car">
                     <h3 class="brand">BMW</h3>
@@ -343,7 +355,11 @@
         <!-- End of Sports -->
         <!-- Start of Trucks -->
         <div id="trucks">
-            <h1 id="h1-car-types">Truck (4x4) cars section</h1>
+            <div class="right-h1-left">
+                <button id="right-btn">►</button>
+                <h1 id="h1-car-types">Truck (4x4) cars section</h1>
+                <button id="left-btn">◀</button>
+            </div>
             <div class="for-flex">
                 <div id="car">
                     <h3 class="brand">Hyundai</h3>
@@ -413,7 +429,11 @@
         <!-- End of Trucks -->
         <!-- Start of Modern cars -->
         <div id="modern">
-            <h1 id="h1-car-types">Modern cars section</h1>
+            <div class="right-h1-left">
+                <button id="right-btn">►</button>
+                <h1 id="h1-car-types">Modern cars section</h1>
+                <button id="left-btn">◀</button>
+            </div>
             <div class="for-flex">
                 <div id="car">
                     <h3 class="brand">Hyundai</h3>
