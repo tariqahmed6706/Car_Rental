@@ -58,7 +58,6 @@ const buttons = document.querySelectorAll("#booking-btn");
 const modal = document.getElementById("booking-modal");
 const closeBtn = document.querySelector(".close");
 
-// دالة لإضافة التأثير
 function addEffectAndAction(element, action) {
   element.classList.add("clicked");
 
@@ -71,7 +70,6 @@ function addEffectAndAction(element, action) {
   }, 500);
 }
 
-// كل الأزرار تفتح المودال
 buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -81,7 +79,6 @@ buttons.forEach((btn) => {
   });
 });
 
-// زرار الإغلاق (x)
 closeBtn.addEventListener("click", (e) => {
   e.preventDefault();
   addEffectAndAction(closeBtn, () => {
@@ -89,7 +86,6 @@ closeBtn.addEventListener("click", (e) => {
   });
 });
 
-// لو ضغط برة المودال يتقفل علطول
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.style.display = "none";

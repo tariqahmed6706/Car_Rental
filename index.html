@@ -72,27 +72,26 @@
     <!-- End of openfeedback() -->
     <!-- Start of nav -->
     <nav>
+        <h2 id="h2-of-nav">These are our cars. You can choose your favorite one:<br>
+                                        Also you can choose the type of the car:
+        </h2>
         <div>
-            <h2 id="h2-of-nav">These are our cars. You can choose your favorite one:<br>
-                                            Also you can choose the type of the car:
-            </h2>
-            <div>
-                <ul id="car-types">
-                    <li onclick="document.getElementById('luxury').scrollIntoView({behavior: 'smooth'});">Luxury</li>
-                    <li onclick="document.getElementById('suv').scrollIntoView({behavior: 'smooth'});">SUV</li>
-                    <li onclick="document.getElementById('sport').scrollIntoView({behavior: 'smooth'});">Sport</li>
-                    <li onclick="document.getElementById('trucks').scrollIntoView({behavior: 'smooth'});">Trucks</li>
-                    <li onclick="document.getElementById('modern').scrollIntoView({behavior: 'smooth'});">Modern</li>
-                </ul>
-            </div>
+            <ul id="car-types">
+                <li onclick="document.getElementById('luxury').scrollIntoView({behavior: 'smooth'});">Luxury</li>
+                <li onclick="document.getElementById('suv').scrollIntoView({behavior: 'smooth'});">SUV</li>
+                <li onclick="document.getElementById('sport').scrollIntoView({behavior: 'smooth'});">Sport</li>
+                <li onclick="document.getElementById('trucks').scrollIntoView({behavior: 'smooth'});">Trucks</li>
+                <li onclick="document.getElementById('modern').scrollIntoView({behavior: 'smooth'});">Modern</li>
+            </ul>
         </div>
+        <button id="go-above-btn" onclick="document.getElementById('header').scrollIntoView({behavior: 'smooth'});">↑</button>
     </nav>
     <!-- End of nav -->
     <!-- The start of section of the index -->
     <section>
         <!-- Start of Luxury -->
         <div id="luxury">
-            <h1 id="car-types">Luxury cars section</h1>
+            <h1 id="h1-car-types">Luxury cars section</h1>
             <div class="for-flex">
                 <div id="car">
                     <h3 class="brand">Rolls-Royce</h3>
@@ -183,7 +182,7 @@
         <!-- End of luxury -->
         <!-- Start of SUV -->
         <div id="suv">
-            <h1 id="car-types">SUV cars section</h1>
+            <h1 id="h1-car-types">SUV cars section</h1>
             <div class="for-flex">
                 <div id="car">
                     <h3 class="brand">BMW</h3>
@@ -253,7 +252,7 @@
         <!-- End of SUV -->
         <!-- Start of Sports -->
         <div id="sport">
-            <h1 id="car-types">Sport cars section</h1>
+            <h1 id="h1-car-types">Sport cars section</h1>
             <div class="for-flex">
                 <div id="car">
                     <h3 class="brand">BMW</h3>
@@ -344,7 +343,7 @@
         <!-- End of Sports -->
         <!-- Start of Trucks -->
         <div id="trucks">
-            <h1 id="car-types">Truck (4x4) cars section</h1>
+            <h1 id="h1-car-types">Truck (4x4) cars section</h1>
             <div class="for-flex">
                 <div id="car">
                     <h3 class="brand">Hyundai</h3>
@@ -414,7 +413,7 @@
         <!-- End of Trucks -->
         <!-- Start of Modern cars -->
         <div id="modern">
-            <h1 id="car-types">Modern cars section</h1>
+            <h1 id="h1-car-types">Modern cars section</h1>
             <div class="for-flex">
                 <div id="car">
                     <h3 class="brand">Hyundai</h3>
@@ -564,7 +563,6 @@
             <a class="footer-link" href="html/terms.html" >Terms & Conditions</a>
             <a class="footer-link" href="html/economic_cars.html">Economic Cars</a>
             <a class="footer-link" href="html/about_us.html">About Us</a>
-            <li onclick="document.getElementById('header').scrollIntoView({behavior: 'smooth'});">Go above</li>
         </div>
         <div class="footer-social">
             <a class="social-icon">
@@ -583,7 +581,7 @@
         </div>
     </footer>
     <!-- The end of footer of the index -->
-
+    
     <script src="main.js"></script>
 </body>
 </html>
