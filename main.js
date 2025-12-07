@@ -27,12 +27,6 @@ function openfeedback() {
 function closefeedback() {
   document.getElementById("Feedback-Popup").style.display = "none";
 }
-function switchtolightmode() {
-  
-}
-function switchtodarkmode() {
-  
-}
 const bookingModal = document.getElementById("booking-modal");
 const bookingButtons = document.querySelectorAll(".booking-btn");
 

@@ -110,13 +110,13 @@ header button#go-below-btn {
   font-size: xx-large;
   width: 50px;
   height: 50px;
-  transition: all 100ms ease;
+  transition: all 50ms ease;
 }
-
 header button#go-below-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px 0 blue inset,
     0 0 35px 0 blue;
+  cursor: pointer;
 }
 
 /* finish header
@@ -305,12 +305,13 @@ nav button#go-above-btn {
   font-size: xx-large;
   width: 50px;
   height: 50px;
-  transition: all 100ms ease;
+  transition: all 50ms ease;
 }
 nav button#go-above-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px 0 blue inset,
       0 0 35px 0 blue;
+  cursor: pointer;
 }
 
 /* finish nav
@@ -366,7 +367,7 @@ button#left-btn {
   font-size: xx-large;
   width: 50px;
   height: 50px;
-  transition: all 100ms ease;
+  transition: all 50ms ease;
   z-index: 1;
 }
 button#right-btn {
@@ -384,92 +385,88 @@ button#left-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px 0 blue inset,
     0 0 35px 0 blue;
+  cursor: pointer;
 }
 div.for-flex {
+  margin-bottom: 20px;
   padding: 35px 10px 0 10px;
   display: flex;
   overflow: auto;
-  scrollbar-width: none;
+  scrollbar-color: #333 transparent;
   gap: 30px;
 }
 #car {
-  margin: auto auto 50px auto;
+  margin: auto auto 20px auto;
   padding: 15px;
   background-color: #cacacac7;
   border: 3px solid darkblue;
   border-radius: 30px;
   display: grid;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 35px;
   position: relative;
-  backdrop-filter: blur(10px);
   /* .car:hover after .carmodel */
 }
 .brand {
   margin: 15px;
   font-size: 30px;
+  font-weight: bolder;
   color: black;
   transition: 1000ms;
 }
 .carmodel {
-  margin: 0px 15px 15px 15px;
-  font-size: 20px;
+  margin: 0px;
+  font-size: 16px;
   font-weight: bold;
   color: #3e3e3e;
   transition: 1000ms;
 }
-#car:hover {
-  .brand {
+#car:hover .brand {
     color: #cf0399;
     transition: 100ms;
-  }
-  .carmodel {
+}
+#car:hover .carmodel {
     color: #b55f04;
     transition: 100ms;
   }
-}
 img {
-  margin: 25px;
-  border: 2px solid #25cab4cc;
+  margin: 25px 10px 10px 10px;
+  border: 2px solid #000484c2;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px 3px #115d53cc;
-  filter: blur(1px);
+  box-shadow: 0px 0px 15px 3px #0004848e;
   width: 300px;
-  transition: 850ms;
+  transition: 100ms;
 }
 img:hover {
   border: 2px solid transparent;
   box-shadow: 0px 0px 15px 3px transparent;
-  filter: blur(0px);
-  transform: scale(1.25);
-  transition: 200ms;
+  transform: scale(1.1);
 }
 .booking-btn {
   margin: 10px auto;
-  padding: 10px;
-  background-color: #007767cc;
-  backdrop-filter: blur(15px);
-  color: white;
   font-weight: 600;
   width: 150px;
+  padding: 10px;
+  float: left;
+  text-decoration: none;
+  text-align: center;
+  background-color: #001679;
+  backdrop-filter: blur(15px);
+  color: white;
   border: 0px solid transparent;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px 2px #007767cc inset,
-              0px 0px 5px 2px #007767cc;
-  transition: 250ms;
+  transition: 100ms;
 }
 .booking-btn:hover {
-  background-color: #ae006c;
+  background-color: #0023be;
   color: #c2fffd;
-  box-shadow: 0px 0px 5px 2px #79004b inset,
-              0px 0px 5px 2px #79004b;
-  transform: translateY(-3px);
-  transition: 250ms;
+  cursor: pointer;
+  transform: translateY(-2px);
 }
 .booking-btn.clicked {
-  background-color: #6707ac;
-  color: #48aca8;
-  transform: translateY(-3px) scale(0.5);
+  background-color: #00146c;
+  color: #6efffa;
+  transform: translateY(-3px) scale(0.6);
   /* transition: 250ms; */
 }
 /* End of Section
@@ -477,66 +474,54 @@ img:hover {
 Popup styles */
 
 div#booking-modal {
-  margin: 0px;
-  left: 0px;
-  top: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: none;
-  position: fixed;
   background-color: #00000080;
-  justify-content: center;
-  align-items: center;
-  animation: booking-modal 500ms ease;
-  z-index: 999;
+  z-index: 2;
 }
 div#booking-modal-content {
-  margin: 0px auto 0px auto;
-  padding: 30px 30px 30px 30px;
+  margin: auto;
+  padding: 15px 35px;
   position: relative;
-  background-color: #ffffffbf;
-  backdrop-filter: blur(25px);
-  border: 3px solid #25cab4;
-  border-radius: 20px 20px 20px 20px;
-  width: auto;
-  max-width: 500px;
-  animation: booking-modal-content_toDown 500ms ease;
-  box-shadow: 0px 0px 20px 20px slategray;
-  overflow: hidden;
-  overflow-y: auto;
-}
-@media screen and (max-width: 450px) {
-  div#booking-modal-content {
-    padding: 30px 0px 30px 0px;
-  }
+  background-color: #e3e3ffa8;
+  backdrop-filter: blur(10px);
+  border: 3px solid #00004d2f;
+  border-radius: 50px;
+  height: 500px;
+  animation: Feedback-Content_toDown 200ms ease;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-color: black transparent;
 }
 button#close-booking-modal {
-  margin: 25px 25px 0px 0px;
-  padding: 0px 0px 0px 0px;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  background-color: transparent;
-  border: 1px solid red;
-  border-radius: 8px 8px 8px 8px;
+  top: 20px;
+  left: 35px;
+  font-size: 25px;
+  background-color: #ff000033;
+  border: 1px solid transparent;
+  border-radius: 8px;
   width: 30px;
   height: 30px;
-  transition: 250ms;
-  box-shadow: 0px 0px 5px 2px #ff0000;}
+  transition: 150ms;
+}
 button#close-booking-modal:hover {
-  background-color: #f79999;
-  border: 1px solid #f79999;
+  background-color: red;
 }
 h1#booking-info {
   text-align: center;
   text-decoration: overline;
-  text-shadow: 0px 0px 5px #ff0000;
+  text-shadow: 0px 0px 5px blue;
   font-weight:bolder;
 }
 form#booking-form {
   display: grid;
   font-weight: bold;
-  text-shadow: 0px 0px 1px #ff0000;
+  text-shadow: 0px 0px 1px blue;
   label {
     margin: 10px 0px 0px 15px;
     padding: 0px 0px 0px 0px;
@@ -546,8 +531,8 @@ form#booking-form {
   input, select {
     margin: 0px 0px 0px 0px;
     padding: 10px;
-    border: 2px solid #6ec0a5;
-    border-radius: 10px 10px 10px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
   }
   input:hover {
     border: 2px solid black;
@@ -563,11 +548,11 @@ form#booking-form {
 
 /* Start of Footer */
 footer {
-  background-color: #424242;
-  color: #ffffff;
+  background-color: #0004847f;
+  backdrop-filter: blur(50px);
   padding: 50px 0px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 100ms ease;
 }
 .footer-links {
   display: flex;
@@ -576,44 +561,36 @@ footer {
   gap: 40px;
   margin-bottom: 30px;
 }
-
 .footer-link {
   color: #ffffff;
   text-decoration: none;
   font-size: 18px;
-  transition: transform 0.3s, color 0.3s;
+  transition: transform 100ms;
 }
-
 .footer-link:hover {
   transform: scale(1.15);
-  color: #e0e0e0;
+  text-decoration: underline;
 }
-
 .footer-social {
   margin-bottom: 30px;
 }
-
 .social-icon {
   display: inline-block;
   margin: 0 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s;
 }
-
 .social-icon img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background: #ffffff;
   padding: 6px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s;
 }
-
 .social-icon:hover img {
   transform: scale(1.2);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-
 .footer-copy {
   color: #e0e0e0;
-  font-size: 14px;
+  font-size: 16px;
 }
